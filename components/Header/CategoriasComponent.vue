@@ -19,7 +19,6 @@ export default Vue.extend({
   },
   methods: {
     async get_categorias() {
-      console.log("Olá, mundo");
       const API_PATH: String = this.$store.getters.getApiPath;
       const CATEGORIAS: Promise<Object> = await this.$axios.$post(`${API_PATH}/get-categorias`)
         .then(response => response);
@@ -34,6 +33,7 @@ export default Vue.extend({
 
 <style scoped>
 nav {
+  max-width: 300px;
   text-align: center;
   position: absolute;
   top: 60%;

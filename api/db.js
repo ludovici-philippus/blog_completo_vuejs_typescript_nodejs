@@ -7,7 +7,7 @@ const connect = async () => {
     host: 'localhost',
     user: 'root',
     password: '',
-    database: 'forum_projeto',
+    database: 'blog_vue',
   })
   console.log('Conectou ao banco')
   global.conexao = connection

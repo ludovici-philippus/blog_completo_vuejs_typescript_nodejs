@@ -2,6 +2,7 @@
   <header>
     <div class="overlay"></div>
     <HeaderContentComponent />
+    <HeaderCategoriasComponent />
   </header>
 </template>
 

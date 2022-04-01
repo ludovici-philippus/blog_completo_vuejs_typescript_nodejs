@@ -23,10 +23,15 @@ APP.use(function(req, res, next) {
   next()
 });
 
-APP.get('/', (req, res) => {
-  res.end('Estou aqui');
-})
+APP.post('/get-categorias', async (req, res) => {
+  const SQL = await DB.connect();
+  const [CATEGORIAS] = await SQL.execute(
+    'SELECT * FROM `tb_categorias`'
+  );
+  console.log(CATEGORIAS);
+  res.jsonp(CATEGORIAS);
+});
 
 APP.listen(5000, () => {
   console.log('Servidor iniciado na porta 5000!');
-})
+});

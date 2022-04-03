@@ -1,5 +1,8 @@
 <template>
-  <HeaderBaseComponent />
+  <div>
+    <HeaderBaseComponent />
+    <MainHomeBaseComponent />
+  </div>
 </template>
 
 <script lang="ts">
@@ -36,5 +39,13 @@ h4,
 h5,
 h6 {
   font-family: var(--fonte-titulos);
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 0 2%;
+  display: flex;
+  flex-wrap: wrap;
 }
 </style>

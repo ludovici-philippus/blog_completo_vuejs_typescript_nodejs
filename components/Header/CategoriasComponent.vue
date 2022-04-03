@@ -35,11 +35,6 @@ export default Vue.extend({
 nav {
   max-width: 300px;
   text-align: center;
-  position: absolute;
-  top: 60%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 2;
 }
 ul {
   list-style: none;

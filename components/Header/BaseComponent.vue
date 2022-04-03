@@ -1,8 +1,11 @@
 <template>
   <header>
     <div class="overlay"></div>
-    <HeaderContentComponent />
-    <HeaderCategoriasComponent />
+    <div class="content">
+      <HeaderContentComponent />
+      <HeaderBuscaComponent />
+      <HeaderCategoriasComponent />
+    </div>
   </header>
 </template>
 
@@ -25,6 +28,18 @@ header {
   background-position: bottom;
   background-size: cover;
   background-attachment: fixed;
+}
+
+.content {
+  position: absolute;
+  width: 100%;
+  z-index: 2;
+  top: 50%;
+  text-align: center;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .overlay {

@@ -7,7 +7,7 @@
 
 <script lang="ts">
 export default {
-  name: 'HomeBaseComponent'
+  name: 'HomeBaseComponent',
 }
 </script>
 

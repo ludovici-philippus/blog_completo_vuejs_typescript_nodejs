@@ -28,9 +28,29 @@ APP.post('/get-categorias', async (req, res) => {
   const [CATEGORIAS] = await SQL.execute(
     'SELECT * FROM `tb_categorias`'
   );
-  console.log(CATEGORIAS);
   res.jsonp(CATEGORIAS);
 });
+
+APP.post('/get-posts', async (req, res) => {
+  const SQL = await DB.connect();
+  const [POSTS] = await SQL.execute(
+    'SELECT * FROM `tb_posts`'
+  );
+  console.log(POSTS);
+  res.jsonp(POSTS);
+});
+
+APP.post('/get-posts-categoria', async (req, res) => {
+  const SLUG_CATEGORIA = req.body.categoria;
+
+  const SQL = await DB.connect();
+  const [POSTS] = await SQL.execute(
+    'SELECT * FROM `tb_posts` WHERE slug_categoria=?',
+    [SLUG_CATEGORIA]
+  );
+
+  res.jsonp(POSTS);
+})
 
 APP.listen(5000, () => {
   console.log('Servidor iniciado na porta 5000!');
